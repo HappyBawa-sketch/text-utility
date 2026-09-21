@@ -3,95 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Online Text Case Converter</title>
+    <title>All-in-One Free Web Utility Toolkit</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #f4f6f9; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
-        .container { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        h1 { text-align: center; margin-bottom: 20px; font-size: 24px; color: #111; }
-        textarea { width: 100%; height: 200px; padding: 15px; border: 1px solid #ccc; border-radius: 6px; font-size: 16px; box-sizing: border-box; resize: vertical; margin-bottom: 20px; }
-        .btn-group { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 25px; }
-        button { flex: 1; min-width: 120px; padding: 12px; font-size: 14px; font-weight: bold; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; transition: background 0.2s; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #f4f6f9; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; }
+        .container { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        h1 { text-align: center; margin-bottom: 5px; font-size: 28px; color: #111; }
+        p.subtitle { text-align: center; color: #666; margin-bottom: 30px; }
+        .tool-card { border-top: 4px solid #007bff; background: #fff; padding: 20px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); margin-bottom: 25px; }
+        .tool-card h2 { margin-top: 0; font-size: 18px; color: #222; border-bottom: 1px solid #eee; padding-bottom: 8px; }
+        textarea, input[type="text"] { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 15px; box-sizing: border-box; margin-bottom: 15px; }
+        textarea { height: 120px; resize: vertical; }
+        .btn-group { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+        button { padding: 10px 16px; font-size: 13px; font-weight: bold; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; transition: background 0.2s; }
         button:hover { background-color: #0056b3; }
         .copy-btn { background-color: #28a745; }
         .copy-btn:hover { background-color: #218838; }
         .clear-btn { background-color: #6c757d; }
         .clear-btn:hover { background-color: #5a6268; }
-        
-        /* Monetag Smartlink Native Block Styles */
-        .native-ad-box { text-align: center; margin-top: 25px; padding: 15px; border: 2px dashed #007bff; background-color: #fdfdfd; border-radius: 6px; }
-        .native-ad-box p { margin: 0 0 10px 0; font-size: 13px; color: #666; font-weight: bold; }
-        .ad-link-btn { display: inline-block; padding: 10px 20px; font-size: 14px; color: white; background-color: #ff5722; text-decoration: none; border-radius: 4px; font-weight: bold; transition: background 0.2s; }
-        .ad-link-btn:hover { background-color: #e64a19; }
+        .counter-badge { display: inline-block; background: #e9ecef; padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; color: #495057; margin-right: 10px; }
+
+        /* Full Screen Verification Overlay Bypass */
+        #activationOverlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(244, 246, 249, 0.98); z-index: 9999; display: flex; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; }
+        .activation-box { background: white; padding: 40px 30px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); text-align: center; max-width: 450px; width: 100%; border-top: 5px solid #28a745; }
+        .activation-box h3 { margin-top: 0; font-size: 22px; color: #111; }
+        .activation-box p { color: #555; font-size: 14px; line-height: 1.5; margin-bottom: 25px; }
+        .activate-link-btn { display: block; width: 100%; padding: 15px; font-size: 16px; color: white; background-color: #28a745; text-decoration: none; border-radius: 6px; font-weight: bold; box-shadow: 0 4px 12px rgba(40,167,69,0.3); transition: background 0.2s; box-sizing: border-box; }
+        .activate-link-btn:hover { background-color: #218838; }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>Online Text Case Converter</h1>
-    <textarea id="textInput" placeholder="Type or paste your text here to instantly format its case..."></textarea>
-    
-    <div class="btn-group">
-        <button onclick="convertCase('upper')">UPPERCASE</button>
-        <button onclick="convertCase('lower')">lowercase</button>
-        <button onclick="convertCase('title')">Title Case</button>
-        <button class="copy-btn" onclick="copyText()">Copy Text</button>
-        <button class="clear-btn" onclick="clearText()">Clear</button>
-    </div>
-
-    <!-- INTEGRATED NATIVE AD BLOCK -->
-    <div class="native-ad-box">
-        <p>⚡ Sponsored Link ⚡</p>
-        <a href="https://omg10.com" target="_blank" rel="noopener noreferrer" class="ad-link-btn">
-            Click Here to Unlock Premium Tools
+<!-- ANTI-BLOCK ACTIVATION OVERLAY -->
+<div id="activationOverlay">
+    <div class="activation-box">
+        <h3>🔒 Robot Verification Required</h3>
+        <p>To access the free Web Utility Toolkit, please click the connection verification button below to securely load the cloud interface utilities.</p>
+        <a href="https://omg10.com/4/3507970" target="_blank" rel="noopener noreferrer" class="activate-link-btn" onclick="unlockTools()">
+            ✅ Verify & Unlock Tools
         </a>
     </div>
 </div>
 
-<script>
-    // FIX: Corrected "getIementById" to "getElementById" below
-    const txtArea = document.getElementById('textInput');
-    const monetagSmartLink = "https://omg10.com";
+<div class="container">
+    <h1>Web Utility Toolkit</h1>
+    <p class="subtitle">Fast, free browser tools for developers, writers, and students.</p>
 
-    // Utility function to execute popunder behavior programmatically
-    function triggerPopunder() {
-        window.open(monetagSmartLink, '_blank', 'noopener,noreferrer');
+    <!-- TOOL 1: TEXT CASE CONVERTER -->
+    <div class="tool-card">
+        <h2>1. Text Case Converter</h2>
+        <textarea id="caseInput" placeholder="Type or paste your text here..."></textarea>
+        <div class="btn-group">
+            <button onclick="convertCase('upper')">UPPERCASE</button>
+            <button onclick="convertCase('lower')">lowercase</button>
+            <button onclick="convertCase('title')">Title Case</button>
+            <button class="copy-btn" onclick="copyData('caseInput')">Copy</button>
+            <button class="clear-btn" onclick="clearData('caseInput')">Clear</button>
+        </div>
+    </div>
+
+    <!-- TOOL 2: WORD & CHARACTER COUNTER -->
+    <div class="tool-card">
+        <h2>2. Word & Character Counter</h2>
+        <textarea id="counterInput" oninput="countMetrics()" placeholder="Start typing to count words and characters..."></textarea>
+        <div style="margin-bottom: 10px;">
+            <span class="counter-badge">Words: <span id="wordCount">0</span></span>
+            <span class="counter-badge">Characters: <span id="charCount">0</span></span>
+        </div>
+        <div class="btn-group">
+            <button class="clear-btn" onclick="clearData('counterInput'); countMetrics();">Clear</button>
+        </div>
+    </div>
+
+    <!-- TOOL 3: SECURE PASSWORD GENERATOR -->
+    <div class="tool-card">
+        <h2>3. Secure Password Generator</h2>
+        <input type="text" id="passwordOutput" readonly placeholder="Your secure password will appear here...">
+        <div class="btn-group">
+            <button onclick="generatePassword()">Generate Password</button>
+            <button class="copy-btn" onclick="copyData('passwordOutput')">Copy Password</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Removes the verification block view upon a valid link click interaction
+    function unlockTools() {
+        setTimeout(function() {
+            document.getElementById('activationOverlay').style.display = 'none';
+        }, 500);
     }
 
     function convertCase(type) {
-        let str = txtArea.value;
-        if (!str) return;
-        
-        // Simulating ad network popunder interaction on tool interaction
-        if (type === 'upper') {
-            triggerPopunder();
-        }
-
-        if (type === 'upper') txtArea.value = str.toUpperCase();
-        if (type === 'lower') txtArea.value = str.toLowerCase();
-        if (type === 'title') {
-            txtArea.value = str.toLowerCase().replace(/\b\w/g, s => s.toUpperCase());
-        }
+        const el = document.getElementById('caseInput');
+        if (!el.value) return;
+        if (type === 'upper') el.value = el.value.toUpperCase();
+        if (type === 'lower') el.value = el.value.toLowerCase();
+        if (type === 'title') el.value = el.value.toLowerCase().replace(/\b\w/g, s => s.toUpperCase());
     }
 
-    function copyText() {
-        if (!txtArea.value) {
-            alert('Please enter some text first!');
-            return;
-        }
-        
-        // Triggers the Monetag router instantly upon copying the text
-        triggerPopunder();
+    function countMetrics() {
+        const txt = document.getElementById('counterInput').value;
+        document.getElementById('charCount').innerText = txt.length;
+        document.getElementById('wordCount').innerText = txt.trim() === "" ? 0 : txt.trim().split(/\s+/).length;
+    }
 
-        txtArea.select();
+    function generatePassword() {
+        const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+";
+        let pass = "";
+        for (let i = 0; i < 14; i++) {
+            pass += chars.charAt(Math.floor(Math.random() * chars.length));
+        }
+        document.getElementById('passwordOutput').value = pass;
+    }
+
+    function copyData(id) {
+        const el = document.getElementById(id);
+        if (!el.value) return;
+        el.select();
         document.execCommand('copy');
-        alert('Text successfully copied to clipboard!');
+        alert("Copied to clipboard!");
     }
 
-    function clearText() {
-        txtArea.value = '';
+    function clearData(id) {
+        document.getElementById(id).value = "";
     }
 </script>
 
 </body>
 </html>
-
