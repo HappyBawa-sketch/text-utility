@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Online Text Case Converter</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #f4f6f9; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .container { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        h1 { text-align: center; margin-bottom: 20px; font-size: 24px; color: #111; }
+        textarea { width: 100%; height: 200px; padding: 15px; border: 1px solid #ccc; border-radius: 6px; font-size: 16px; box-sizing: border-box; resize: vertical; margin-bottom: 20px; }
+        .btn-group { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 25px; }
+        button { flex: 1; min-width: 120px; padding: 12px; font-size: 14px; font-weight: bold; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; transition: background 0.2s; }
+        button:hover { background-color: #0056b3; }
+        .copy-btn { background-color: #28a745; }
+        .copy-btn:hover { background-color: #218838; }
+        .clear-btn { background-color: #6c757d; }
+        .clear-btn:hover { background-color: #5a6268; }
+        
+        /* Monetag Smartlink Native Block Styles */
+        .native-ad-box { text-align: center; margin-top: 25px; padding: 15px; border: 2px dashed #007bff; background-color: #fdfdfd; border-radius: 6px; }
+        .native-ad-box p { margin: 0 0 10px 0; font-size: 13px; color: #666; font-weight: bold; }
+        .ad-link-btn { display: inline-block; padding: 10px 20px; font-size: 14px; color: white; background-color: #ff5722; text-decoration: none; border-radius: 4px; font-weight: bold; transition: background 0.2s; }
+        .ad-link-btn:hover { background-color: #e64a19; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Online Text Case Converter</h1>
+    <textarea id="textInput" placeholder="Type or paste your text here to instantly format its case..."></textarea>
+    
+    <div class="btn-group">
+        <button onclick="convertCase('upper')">UPPERCASE</button>
+        <button onclick="convertCase('lower')">lowercase</button>
+        <button onclick="convertCase('title')">Title Case</button>
+        <button class="copy-btn" onclick="copyText()">Copy Text</button>
+        <button class="clear-btn" onclick="clearText()">Clear</button>
+    </div>
+
+    <!-- INTEGRATED NATIVE AD BLOCK -->
+    <div class="native-ad-box">
+        <p>⚡ Sponsored Link ⚡</p>
+        <a href="https://omg10.com" target="_blank" rel="noopener noreferrer" class="ad-link-btn">
+            Click Here to Unlock Premium Tools
+        </a>
+    </div>
+</div>
+
+<script>
+    // FIX: Corrected "getIementById" to "getElementById" below
+    const txtArea = document.getElementById('textInput');
+    const monetagSmartLink = "https://omg10.com";
+
+    // Utility function to execute popunder behavior programmatically
+    function triggerPopunder() {
+        window.open(monetagSmartLink, '_blank', 'noopener,noreferrer');
+    }
+
+    function convertCase(type) {
+        let str = txtArea.value;
+        if (!str) return;
+        
+        // Simulating ad network popunder interaction on tool interaction
+        if (type === 'upper') {
+            triggerPopunder();
+        }
+
+        if (type === 'upper') txtArea.value = str.toUpperCase();
+        if (type === 'lower') txtArea.value = str.toLowerCase();
+        if (type === 'title') {
+            txtArea.value = str.toLowerCase().replace(/\b\w/g, s => s.toUpperCase());
+        }
+    }
+
+    function copyText() {
+        if (!txtArea.value) {
+            alert('Please enter some text first!');
+            return;
+        }
+        
+        // Triggers the Monetag router instantly upon copying the text
+        triggerPopunder();
+
+        txtArea.select();
+        document.execCommand('copy');
+        alert('Text successfully copied to clipboard!');
+    }
+
+    function clearText() {
+        txtArea.value = '';
+    }
+</script>
+
+</body>
+</html>
+
